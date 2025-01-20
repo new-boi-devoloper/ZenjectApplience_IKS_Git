@@ -4,5 +4,7 @@
     {
         void PlayOpenSound();
         void PlayCloseSound();
+        void PlayShootSound(); 
+        void PlayDestroySound();
     }
 }

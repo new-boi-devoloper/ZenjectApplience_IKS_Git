@@ -11,10 +11,10 @@ namespace _Source.Main
     {
         private readonly Dictionary<Type, object> _services = new();
 
-        public ServiceLocator(AudioSource audioSource, AudioClip openSound, AudioClip closeSound)
+        public ServiceLocator(AudioSource audioSource, AudioClip openSound, AudioClip closeSound, AudioClip shootSound, AudioClip destroySound)
         {
             RegisterService<IFadeService>(new FadeService());
-            RegisterService<ISoundPlayer>(new SoundPlayer(audioSource, openSound, closeSound));
+            RegisterService<ISoundPlayer>(new SoundPlayer(audioSource, openSound, closeSound, shootSound, destroySound));
             
             RegisterService<ISaver>(new PlayerPrefsSaver());
         }
